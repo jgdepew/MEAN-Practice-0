@@ -1,0 +1,11 @@
+<div>
+	<h3>New Question</h3>
+	<a href="/#/dashboard">Home</a>
+	<a href="/logout">logout</a>
+	<form ng-submit='createQuestion()'>
+		<p>Question: <textarea ng-model='question.question'></textarea></p>
+		<p>Description: <textarea ng-model='question.description'></textarea></p>
+		<a href="/#/dashboard""><button>Cancel</button></a>
+		<input type="submit" value="Submit">
+	</form>
+</div>
