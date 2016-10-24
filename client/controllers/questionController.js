@@ -28,7 +28,7 @@ app.controller('questionController', function($scope, questionFactory, $location
 	getAllQuestions();
 
 	$scope.createQuestion = function(){
-		if($scope.question.question.length >= 10) {
+		if($scope.question && $scope.question.question.length >= 10) {
 			questionFactory.createQuestion($scope.question, getAllQuestions)
 		} else{
 			alert('Question is not long enough');
@@ -36,7 +36,7 @@ app.controller('questionController', function($scope, questionFactory, $location
 	}
 
 	$scope.createAnswer = function() {
-		if($scope.answer.answer.length >= 5) {
+		if($scope.answer && $scope.answer.answer.length >= 5) {
 			$scope.answer.question = $routeParams.id
 			questionFactory.createAnswer($scope.answer, getQuestion);
 		} else { 
